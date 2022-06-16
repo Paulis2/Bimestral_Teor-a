@@ -1,0 +1,50 @@
+<!DOCTYPEhtml>
+    <html>
+        <cabeza>
+            <juego de caracteres meta="UTF-8">
+                <título> Canvas básico </título>
+                <estilo>
+                    # miLienzo
+                    {
+                    borde:punteado 3 px amarillo;
+                    fondo:verde;
+                    }
+                </estilo>
+                <uión>
+                    ventana _ onload=función()
+                    {
+                    var lienzo=documento.getElementById("miCanvas");
+                    if (lienzo && lienzo.getContext){
+                    var ctx=lienzo.getContext ("2d");
+                    si (ctx)
+                    {
+                    //Variables
+                    var bola = nueva Imagen();
+                    //Funciones
+                    función muestraPatron(repite)
+                    {
+                    ctx . fuente = "7em Verdana";
+                    ctx . ancho de linea = 1.0;
+                    ctx . EstiloRelleno = "blue";
+                    ctx . stroKeStyle = "yellow";
+                    //
+                    var patrón=ctx.createPattern( bola,repite);
+                    ctx.clearRect (0,0,lienzo.ancho,lienzo.alto);
+                    ctx.fillStyle = mecenas ;
+                    ctx.fillRect (0,0,lienzo . ancho,lienzo.alto);
+                    //ctx.texto de relleno ("HOLA",15,150):
+                    }
+                    bola _ src = "img/bola.png";
+                    bola _ onload = función (e)
+                    {
+                    muestraPatrón ("repetir");
+                    }
+                }
+            }
+        }
+                </guión>
+            </cabeza>
+            <cuerpo>
+                <h1>conceptos básicos de Canvas</h1>
+                <canvas id="miCanvas" width="500px" height="300px">Tu navegador no soporta canvas</canvas>
+            </cuerpo>
